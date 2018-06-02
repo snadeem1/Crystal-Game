@@ -6,51 +6,55 @@ var totalScore = 0;
 var number = (Math.floor(Math.random() * 50) + 49);
 $("#number").html(number);
 
+function calculateTotal() {
+    if (totalScore == number) {
+        wins++;
+        $("#wins").html("Wins " + wins);
+    }
+    
+    if ( totalScore > number) {
+    losses++;
+    $("#losses").html("Losses " + losses)
+    
+    }
+    }
 
 
 
 $("#ruby").on("click", function(){
     var ruby = $(this).val();
     addup = addup + parseInt(ruby);
-    $("#totalscore").html("Total Score " + addup);
-    totalScore.push(addup);
-
+    totalScore = totalScore + addup;
+    $("#totalscore").html("Total Score " + totalScore);
+    calculateTotal();
 
 })
 
 $("#topaz").on("click", function(){
     var topaz = $(this).val();
     addup = addup + parseInt(topaz);
-    $("#totalscore").html("Total Score " + addup);
-    totalScore.push(addup);
-
+    totalScore = totalScore + addup;
+    $("#totalscore").html("Total Score " + totalScore);
+    calculateTotal();
 
 })
 
 $("#amber").on("click", function(){
     var amber = $(this).val();
     addup = addup + parseInt(amber);
-    $("#totalscore").html("Total Score " + addup);
-    totalScore.push(addup);
+    totalScore = totalScore + addup;
+    $("#totalscore").html("Total Score " + totalScore);
+    calculateTotal();
 
 
 })
 $("#diamond").on("click", function(){
     var diamond = $(this).val();
     addup = addup + parseInt(diamond);
-    $("#totalscore").html("Total Score " + addup);
-    totalScore.push(addup);
+    totalScore = totalScore + addup;
+    $("#totalscore").html("Total Score " + totalScore);
+    calculateTotal();
 
 
 })
 
-if (totalScore == number) {
-    wins++;
-    $("#wins").html("Wins " + wins);
-}
-
-else if ( totalScore > number) {
-losses++;
-$("#losses").html("Losses " + losses)
-
-}
