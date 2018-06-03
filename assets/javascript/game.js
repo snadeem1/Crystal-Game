@@ -6,18 +6,29 @@ var totalScore = 0;
 var number = (Math.floor(Math.random() * 50) + 49);
 $("#number").html(number);
 
+function reset(){
+addup = 0;
+totalScore = 0;
+number = (Math.floor(Math.random() * 50) + 49);
+$("#number").html("Random Number " + number);
+$("#totalscore").html("Total Score " + totalScore);
+}
+
 function calculateTotal() {
     if (totalScore == number) {
         wins++;
         $("#wins").html("Wins " + wins);
+        reset();
     }
     
     if ( totalScore > number) {
     losses++;
-    $("#losses").html("Losses " + losses)
+    $("#losses").html("Losses " + losses);
+    reset();
     
     }
     }
+
 
 
 
