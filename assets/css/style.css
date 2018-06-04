@@ -4,5 +4,38 @@ width: 100px;
 }
 
 body{
-    background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/06/Backgrounds-Light-Blue-HD-Backgrounds.jpg);
+    background-image: url(http://ak3.picdn.net/shutterstock/videos/22217113/thumb/1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+    background-color: lightyellow;
+}
+h1{
+    color: palevioletred;
+    font-style: italic;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: green;
+}
+#number{
+    font-weight: bold;
+    font-style: oblique;
+    font-family: serif;
+    font-size: 40px;
+}
+h2{
+    color: teal;
+    font-family: serif;
+}
+
+p{
+    font-weight: bold;
+    color: purple;
+    font-style: italic;
+}
+#totalscore{
+    font-weight: bold;
+    font-style: italic;
+    color: blue;
 }
