@@ -65,10 +65,20 @@ $("#amber").on("click", function(){
 $("#diamond").on("click", function(){
     var diamond = $(this).val();
     totalScore = totalScore + parseInt(diamond);
-    $("#totalscore").html("Total Score " + totalScore);
+    $("#totalscore").html("Total Score: " + totalScore);
     calculateTotal();
 
 
 })
 
+$("#resetbtn").on("click", function(){
+    wins = 0;
+    losses = 0;
+    reset();
+    $("#wins").html("Wins: " );
+    $("#losses").html("Losses: ");
+    
+    
+    });
 });
+

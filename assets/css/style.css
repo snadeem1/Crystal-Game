@@ -17,15 +17,14 @@ body{
     background-repeat: no-repeat;
     background-size: 100% 125%;
     
-    background-color: lightyellow;
+    
 }
 h1{
-    color: palevioletred;
+    color: #408000;
     font-style: italic;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-decoration: underline;
-    text-decoration-style: double;
-    text-decoration-color: green;
+    font-family: serif;
+    font-weight: bold;
+    
 }
 #number{
     font-weight: bold;
@@ -36,11 +35,12 @@ h1{
 h2{
     color: teal;
     font-family: serif;
+    font-weight: 600;
 }
 
 p{
     font-weight: bold;
-    color: #9966ff;
+    color: #5900b3;
     font-style: italic;
     font-size: 30px;
 }
@@ -49,4 +49,11 @@ p{
     font-style: italic;
     color: #8e256b;
     font-size: 30px;
+}
+
+#resetbtn{
+    background:#ff66ff;
+    color: white;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
