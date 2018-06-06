@@ -4,15 +4,19 @@ var losses = 0;
 var addup = 0;
 var totalScore = 0;
 
-var number = (Math.floor(Math.random() * 50) + 49);
+var number = (Math.floor(Math.random() * 100) + 49);
 $("#number").html(number);
 
 function reset(){
 addup = 0;
 totalScore = 0;
-number = (Math.floor(Math.random() * 50) + 49);
+number = (Math.floor(Math.random() * 100) + 49);
 $("#number").html(number);
 $("#totalscore").html("Total Score: " + totalScore);
+$("#ruby").attr("value", Math.floor(Math.random() *5) + 1);
+$("#topaz").attr("value", Math.floor(Math.random() *10) + 5);
+$("#amber").attr("value", Math.floor(Math.random() *20) + 10);
+$("#diamond").attr("value", Math.floor(Math.random() *30) + 20);
 }
 
 function calculateTotal() {
@@ -35,8 +39,8 @@ function calculateTotal() {
 
 $("#ruby").on("click", function(){
     var ruby = $(this).val();
-    addup = addup + parseInt(ruby);
-    totalScore = totalScore + addup;
+    //addup = addup + parseInt(ruby);
+    totalScore = totalScore + parseInt(ruby);
     $("#totalscore").html("Total Score: " + totalScore);
     calculateTotal();
 
@@ -44,8 +48,7 @@ $("#ruby").on("click", function(){
 
 $("#topaz").on("click", function(){
     var topaz = $(this).val();
-    addup = addup + parseInt(topaz);
-    totalScore = totalScore + addup;
+    totalScore = totalScore + parseInt(topaz);
     $("#totalscore").html("Total Score: " + totalScore);
     calculateTotal();
 
@@ -53,8 +56,7 @@ $("#topaz").on("click", function(){
 
 $("#amber").on("click", function(){
     var amber = $(this).val();
-    addup = addup + parseInt(amber);
-    totalScore = totalScore + addup;
+    totalScore = totalScore + parseInt(amber);
     $("#totalscore").html("Total Score: " + totalScore);
     calculateTotal();
 
@@ -62,8 +64,7 @@ $("#amber").on("click", function(){
 })
 $("#diamond").on("click", function(){
     var diamond = $(this).val();
-    addup = addup + parseInt(diamond);
-    totalScore = totalScore + addup;
+    totalScore = totalScore + parseInt(diamond);
     $("#totalscore").html("Total Score " + totalScore);
     calculateTotal();
 
