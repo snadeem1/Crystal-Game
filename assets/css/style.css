@@ -1,10 +1,19 @@
 img {
-height: 100px;
-width: 100px;
+height: 120px;
+width: 120px;
+margin-left: -5px;
+margin-right: -5px;
+}
+
+#ruby, #topaz, #amber, #diamond{
+    border-style: solid;
+    border-color: plum;
+    border-width: 5px;
+    border-radius: 10px;
 }
 
 body{
-    background-image: url(http://ak3.picdn.net/shutterstock/videos/22217113/thumb/1.jpg);
+    background-image: url(https://ak7.picdn.net/shutterstock/videos/8806687/thumb/1.jpg);
     background-repeat: no-repeat;
     background-size: 100% 125%;
     
@@ -31,11 +40,13 @@ h2{
 
 p{
     font-weight: bold;
-    color: purple;
+    color: #9966ff;
     font-style: italic;
+    font-size: 30px;
 }
 #totalscore{
     font-weight: bold;
     font-style: italic;
-    color: blue;
+    color: #8e256b;
+    font-size: 30px;
 }
