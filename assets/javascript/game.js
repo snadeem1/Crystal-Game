@@ -1,14 +1,13 @@
 $(document).ready(function() {
 var wins = 0;
 var losses = 0;
-var addup = 0;
 var totalScore = 0;
-
+// random number function
 var number = (Math.floor(Math.random() * 100) + 49);
 $("#number").html(number);
 
+//reset function
 function reset(){
-addup = 0;
 totalScore = 0;
 number = (Math.floor(Math.random() * 100) + 49);
 $("#number").html(number);
@@ -19,6 +18,7 @@ $("#amber").attr("value", Math.floor(Math.random() *20) + 10);
 $("#diamond").attr("value", Math.floor(Math.random() *30) + 20);
 }
 
+//check if the total score is equal or greater than the number and then determines wins or losses
 function calculateTotal() {
     if (totalScore == number) {
         wins++;
@@ -35,11 +35,11 @@ function calculateTotal() {
     }
 
 
-
+//on click function, add the values of the crytals when clicked
 
 $("#ruby").on("click", function(){
     var ruby = $(this).val();
-    //addup = addup + parseInt(ruby);
+   
     totalScore = totalScore + parseInt(ruby);
     $("#totalscore").html("Total Score: " + totalScore);
     calculateTotal();
@@ -70,6 +70,8 @@ $("#diamond").on("click", function(){
 
 
 })
+
+//reset btn function, reset the whole game
 
 $("#resetbtn").on("click", function(){
     wins = 0;
